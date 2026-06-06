@@ -1,0 +1,92 @@
+[
+  {
+    "sigla": "Prefeitura de Salvador",
+    "nome": "Prefeitura Municipal de Salvador",
+    "tipo": "Municipal",
+    "icone": "🏙️",
+    "sede": "Salvador",
+    "site": "https://www.salvador.ba.gov.br",
+    "descricao": "Prefeitura da capital do estado, realizando concursos regulares para saúde, educação, tecnologia e segurança municipal."
+  },
+  {
+    "sigla": "Gov Bahia (SEC)",
+    "nome": "Secretaria de Educação do Estado da Bahia",
+    "tipo": "Estadual",
+    "icone": "📚",
+    "sede": "Salvador",
+    "site": "http://www.educacao.ba.gov.br",
+    "descricao": "Órgão estadual responsável pela contratação de professores, pedagogos e coordenadores para a rede estadual de ensino."
+  },
+  {
+    "sigla": "Gov Bahia (SESAB)",
+    "nome": "Secretaria de Saúde do Estado da Bahia",
+    "tipo": "Estadual",
+    "icone": "🏥",
+    "sede": "Salvador",
+    "site": "http://www.saude.ba.gov.br",
+    "descricao": "Secretaria de saúde estadual, promovendo concursos para médicos, cirurgiões-dentistas, enfermeiros e técnicos."
+  },
+  {
+    "sigla": "TJ-BA",
+    "nome": "Tribunal de Justiça do Estado da Bahia",
+    "tipo": "Judiciário",
+    "icone": "⚖️",
+    "sede": "Salvador",
+    "site": "https://www.tjba.jus.br",
+    "descricao": "Poder Judiciário estadual, abrindo vagas para analistas de TI, oficiais de justiça, escrivães e cargos administrativos."
+  },
+  {
+    "sigla": "UFBA",
+    "nome": "Universidade Federal da Bahia",
+    "tipo": "Federal",
+    "icone": "🏛️",
+    "sede": "Salvador",
+    "site": "https://concursos.ufba.br",
+    "descricao": "Universidade Federal, com certames para professores universitários e técnicos-administrativos (inclusive áreas de TI e Saúde)."
+  },
+  {
+    "sigla": "IFBA",
+    "nome": "Instituto Federal da Bahia",
+    "tipo": "Federal",
+    "icone": "⚙️",
+    "sede": "Salvador",
+    "site": "https://portal.ifba.edu.br/concursos",
+    "descricao": "Instituto Federal de Ensino, com editais ocorrentes para professores de EBTT e servidores técnico-administrativos."
+  },
+  {
+    "sigla": "Pref Feira de Santana",
+    "nome": "Prefeitura Municipal de Feira de Santana",
+    "tipo": "Municipal",
+    "icone": "🏰",
+    "sede": "Feira de Santana",
+    "site": "http://www.feiradesantana.ba.gov.br",
+    "descricao": "Segunda maior prefeitura do estado, promovendo editais periódicos para o magistério, saúde bucal e setor administrativo."
+  },
+  {
+    "sigla": "Pref Vitória da Conquista",
+    "nome": "Prefeitura Municipal de Vitória da Conquista",
+    "tipo": "Municipal",
+    "icone": "☕",
+    "sede": "Vitória da Conquista",
+    "site": "https://www.pmvc.ba.gov.br",
+    "descricao": "Prefeitura da principal cidade do sudoeste baiano, com certames de grande porte para diversas especialidades de professores e dentistas."
+  },
+  {
+    "sigla": "Pref Camaçari",
+    "nome": "Prefeitura Municipal de Camaçari",
+    "tipo": "Municipal",
+    "icone": "🏭",
+    "sede": "Camaçari",
+    "site": "http://www.camacari.ba.gov.br",
+    "descricao": "Importante polo industrial do estado, realizando certames de grande porte para áreas técnicas de TI, saúde e educação."
+  },
+  {
+    "sigla": "Pref Barreiras",
+    "nome": "Prefeitura Municipal de Barreiras",
+    "tipo": "Municipal",
+    "icone": "⛰️",
+    "sede": "Barreiras",
+    "site": "https://barreiras.ba.gov.br",
+    "descricao": "Prefeitura da maior cidade do oeste baiano, abrindo concursos públicos de destaque para profissionais do ensino e da odontologia."
+  }
+]
