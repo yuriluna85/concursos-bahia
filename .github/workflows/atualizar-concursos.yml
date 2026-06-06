@@ -26,9 +26,7 @@ jobs:
         node-version: '24'
 
     - name: Executar Compilador de Concursos
-      run: |
-        cd concursos-bahia
-        node compilador.js
+      run: node compilador.js
 
     - name: Comitar e Enviar Atualizações para o GitHub
       run: |
