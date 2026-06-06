@@ -1,45 +1,37 @@
 {
-  "geradoEm": "2026-06-06T17:15:03.593Z",
-  "totalGeral": 43,
+  "geradoEm": "2026-06-06T17:25:59.826Z",
+  "totalGeral": 48,
   "totaisNiveis": {
-    "Médio": 4,
-    "Superior": 39,
+    "Médio": 8,
+    "Superior": 40,
     "Técnico": 0
   },
   "totaisAreas": {
-    "Professor": 9,
-    "Pedagogo": 9,
+    "Professor": 12,
+    "Pedagogo": 8,
     "Tecnologia da Informação": 9,
-    "Dentista / Odontologia": 8,
-    "Geral / Outras Áreas": 8
+    "Dentista / Odontologia": 10,
+    "Geral / Outras Áreas": 9
   },
   "status": {
-    "Aberto": 6,
-    "Encerrado": 37
+    "Aberto": 8,
+    "Encerrado": 40
   },
   "porInstituicao": [
     {
-      "nome": "Prefeitura de Salvador",
-      "total": 7
-    },
-    {
       "nome": "Gov Bahia (SEC)",
-      "total": 6
+      "total": 14
     },
     {
-      "nome": "Gov Bahia (SESAB)",
-      "total": 4
-    },
-    {
-      "nome": "TJ-BA",
-      "total": 4
-    },
-    {
-      "nome": "Pref Feira de Santana",
-      "total": 4
+      "nome": "Prefeitura de Salvador",
+      "total": 5
     },
     {
       "nome": "Pref Vitória da Conquista",
+      "total": 5
+    },
+    {
+      "nome": "Pref Feira de Santana",
       "total": 4
     },
     {
@@ -51,11 +43,19 @@
       "total": 4
     },
     {
-      "nome": "IFBA",
+      "nome": "TJ-BA",
       "total": 3
     },
     {
       "nome": "UFBA",
+      "total": 3
+    },
+    {
+      "nome": "IFBA",
+      "total": 3
+    },
+    {
+      "nome": "Gov Bahia (SESAB)",
       "total": 3
     }
   ]
