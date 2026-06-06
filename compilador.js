@@ -15,6 +15,19 @@ const ORGAOS_CONCURSO = [
   { sigla: 'Pref Barreiras', orgao: 'Prefeitura Municipal de Barreiras', site: 'https://barreiras.ba.gov.br' }
 ];
 
+const SITES_CONCURSOS = {
+  'Prefeitura de Salvador': 'http://www.concursos.salvador.ba.gov.br/',
+  'Gov Bahia (SEC)': 'https://www.saeb.ba.gov.br/concursos',
+  'Gov Bahia (SESAB)': 'https://www.saude.ba.gov.br/institucional/concursos/',
+  'TJ-BA': 'https://www.tjba.jus.br/portal/concursos/',
+  'UFBA': 'https://concursos.ufba.br/',
+  'IFBA': 'https://portal.ifba.edu.br/concursos',
+  'Pref Feira de Santana': 'http://www.feiradesantana.ba.gov.br/secao.asp?id=51',
+  'Pref Vitória da Conquista': 'https://www.pmvc.ba.gov.br/concursos-selecoes/',
+  'Pref Camaçari': 'http://www.camacari.ba.gov.br/',
+  'Pref Barreiras': 'https://barreiras.ba.gov.br/concursos/'
+};
+
 const TEMAS_VAGAS = {
   'professor': {
     nome: 'Professor',
@@ -364,7 +377,7 @@ function verificarEGerarHistoricoRetroativo() {
         vagas: 5 + (seedVal % 25),
         inscricoesInicio: inscStart,
         inscricoesFim: inscEnd,
-        url: `${org.site}/concurso-edital-${numEdital.replace('/', '-')}-${i}`,
+        url: SITES_CONCURSOS[org.sigla] || org.site,
         status: "Encerrado",
         dataPublicacao: dataPub,
         fonte: `Diário Oficial de ${org.sigla}`,
@@ -408,7 +421,7 @@ async function buscarNovosConcursos() {
       nivel: "Superior",
       area: "Professor",
       vagas: 450,
-      url: "http://www.educacao.ba.gov.br/concurso-professor-2026",
+      url: SITES_CONCURSOS["Gov Bahia (SEC)"],
       banca: "FCC",
       salarioMax: 4850,
       inscricoesInicio: new Date(hoje.getTime() - (2 * 24 * 3600 * 1000)).toISOString(),
@@ -422,7 +435,7 @@ async function buscarNovosConcursos() {
       nivel: "Superior",
       area: "Tecnologia da Informação",
       vagas: 40,
-      url: "https://www.salvador.ba.gov.br/concurso-ti-2026",
+      url: SITES_CONCURSOS["Prefeitura de Salvador"],
       banca: "FGV",
       salarioMax: 9200,
       inscricoesInicio: new Date(hoje.getTime() - (1 * 24 * 3600 * 1000)).toISOString(),
@@ -436,7 +449,7 @@ async function buscarNovosConcursos() {
       nivel: "Superior",
       area: "Pedagogo",
       vagas: 120,
-      url: "http://www.feiradesantana.ba.gov.br/concursos-2026",
+      url: SITES_CONCURSOS["Pref Feira de Santana"],
       banca: "Instituto AOCP",
       salarioMax: 3800,
       inscricoesInicio: new Date(hoje.getTime() + (2 * 24 * 3600 * 1000)).toISOString(), // Abre em breve
@@ -450,7 +463,7 @@ async function buscarNovosConcursos() {
       nivel: "Superior",
       area: "Dentista / Odontologia",
       vagas: 65,
-      url: "http://www.saude.ba.gov.br/concurso-sesab-2026",
+      url: SITES_CONCURSOS["Gov Bahia (SESAB)"],
       banca: "IBFC",
       salarioMax: 6800,
       inscricoesInicio: new Date(hoje.getTime() - (3 * 24 * 3600 * 1000)).toISOString(),
@@ -464,7 +477,7 @@ async function buscarNovosConcursos() {
       nivel: "Médio",
       area: "Geral / Outras Áreas",
       vagas: 80,
-      url: "https://www.laurodefreitas.ba.gov.br/concurso-2026",
+      url: SITES_CONCURSOS["Prefeitura de Salvador"], // Lauro de Freitas maps to Salvador Portal Concursos
       banca: "IDIB",
       salarioMax: 2400,
       inscricoesInicio: new Date(hoje.getTime() - (2 * 24 * 3600 * 1000)).toISOString(),
@@ -478,7 +491,7 @@ async function buscarNovosConcursos() {
       nivel: "Superior",
       area: "Tecnologia e Informática", // Mapeado para TI
       vagas: 25,
-      url: "https://www.tjba.jus.br/concurso-ti-2026",
+      url: SITES_CONCURSOS["TJ-BA"],
       banca: "Cebraspe",
       salarioMax: 10450,
       inscricoesInicio: new Date(hoje.getTime() - (1 * 24 * 3600 * 1000)).toISOString(),
@@ -634,6 +647,53 @@ function gerarMetricas() {
   console.log(`Métricas de concursos salvas em: ${metricasPath}`);
 }
 
+// Sanitiza URLs fictícias/mockadas na pasta DATA e as substitui pelos links oficiais mapeados
+function sanitizarUrlsNaPastaData() {
+  console.log("Sanitizando URLs fictícias na pasta DATA...");
+  const dataDirPath = path.join(__dirname, 'DATA');
+  if (!fs.existsSync(dataDirPath)) return;
+
+  const arquivosJson = buscarArquivosJSON(dataDirPath);
+
+  arquivosJson.forEach(filePath => {
+    const relPath = path.relative(dataDirPath, filePath);
+    const parts = relPath.split(path.sep);
+
+    // Se tiver 4 partes (ANO/MES/TEMA/TEMA.json), é um arquivo mensal original
+    if (parts.length === 4) {
+      try {
+        let content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        if (Array.isArray(content)) {
+          let modificado = false;
+          content.forEach(c => {
+            const urlOficial = SITES_CONCURSOS[c.instituicao];
+            if (urlOficial && c.url !== urlOficial) {
+              c.url = urlOficial;
+              modificado = true;
+            }
+          });
+
+          if (modificado) {
+            // Re-gravar JSON
+            fs.writeFileSync(filePath, JSON.stringify(content, null, 2), 'utf-8');
+
+            // Re-gravar CSV correspondente de forma consistente
+            const csvPath = filePath.replace(/\.json$/, '.csv');
+            let csvContent = 'data_coleta,titulo,resumo,instituicao,nivel,area,vagas,inscricoes_inicio,inscricoes_fim,url,status,data_publicacao,fonte,banca,salario_max\n';
+            content.forEach(c => {
+              csvContent += `${escapeCSV(c.dataColeta || c.data_coleta)},${escapeCSV(c.titulo)},${escapeCSV(c.resumo)},${escapeCSV(c.instituicao)},${escapeCSV(c.nivel)},${escapeCSV(c.area)},${escapeCSV(c.vagas)},${escapeCSV(c.inscricoesInicio || c.inscricoes_inicio)},${escapeCSV(c.inscricoesFim || c.inscricoes_fim)},${escapeCSV(c.url)},${escapeCSV(c.status)},${escapeCSV(c.dataPublicacao || c.data_publicacao)},${escapeCSV(c.fonte)},${escapeCSV(c.banca)},${escapeCSV(c.salarioMax || c.salario_max)}\n`;
+            });
+            fs.writeFileSync(csvPath, csvContent, 'utf-8');
+          }
+        }
+      } catch (e) {
+        console.error(`Erro ao sanitizar arquivo ${filePath}:`, e.message);
+      }
+    }
+  });
+  console.log("Sanitização de URLs na pasta DATA concluída!");
+}
+
 // Execução Principal do Compilador de Concursos
 async function executarCompilador() {
   console.log(`--- Iniciando Compilador de Concursos Públicos da Bahia (${new Date().toLocaleString()}) ---`);
@@ -641,10 +701,13 @@ async function executarCompilador() {
   // 1. Sementa o histórico de 2 anos se estiver vazio
   verificarEGerarHistoricoRetroativo();
 
-  // 2. Coleta novos concursos
+  // 2. Sanitiza as URLs na pasta DATA para corrigir links antigos mockados
+  sanitizarUrlsNaPastaData();
+
+  // 3. Coleta novos concursos
   const concursosNovos = await buscarNovosConcursos();
 
-  // 3. Salva no histórico do mês atual
+  // 4. Salva no histórico do mês atual
   for (const tema of ['professor', 'pedagogo', 'ti', 'dentista', 'geral']) {
     console.log(`Salvando concursos recentes no histórico: ${tema} (${concursosNovos[tema].length} editais)`);
     try {
@@ -654,13 +717,13 @@ async function executarCompilador() {
     }
   }
 
-  // 4. Consolida os arquivos históricos anuais
+  // 5. Consolida os arquivos históricos anuais
   consolidarTodosAnos();
 
-  // 5. Gera a compilação geral dos editais abertos
+  // 6. Gera a compilação geral dos editais abertos
   gerarUltimosConcursos();
 
-  // 6. Atualiza métricas estatísticas de toda a base histórica
+  // 7. Atualiza métricas estatísticas de toda a base histórica
   gerarMetricas();
 
   console.log("--- Compilador de Concursos Bahia finalizado com sucesso! ---");
