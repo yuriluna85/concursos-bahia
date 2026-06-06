@@ -1,6 +1,23 @@
 {
-  "ultimaAtualizacao": "2026-06-06T17:48:08.047Z",
+  "ultimaAtualizacao": "2026-06-06T19:57:24.117Z",
   "concursos": [
+    {
+      "dataColeta": "2026-06-06T19:57:24.105Z",
+      "titulo": "Concursos Bahia 2026: editais abertos e previstos no estado BA!",
+      "resumo": "... TI e Analista de Compras e Contratos e Assistente. Escolaridade, Nível médio e ... Nível superior. Carreiras, Fiscal e Tecnologia da Informação. Lotação, Bahia.",
+      "instituicao": "Prefeitura de Salvador",
+      "nivel": "Médio",
+      "area": "Tecnologia da Informação",
+      "vagas": 890,
+      "inscricoesInicio": "2026-06-02T00:00:00.000Z",
+      "inscricoesFim": "2026-08-16T00:00:00.000Z",
+      "url": "https://blog.grancursosonline.com.br/concursos-bahia-ba/",
+      "status": "Aberto",
+      "dataPublicacao": "2026-06-02T19:51:40.236Z",
+      "fonte": "Diário Oficial de Prefeitura de Salvador",
+      "banca": "FCC",
+      "salarioMax": 14667.84
+    },
     {
       "dataColeta": "2026-06-06T17:48:08.034Z",
       "titulo": "Concurso PM BA e CBM BA Saúde 2026: Oportunidade Estratégica para Cirurgiões-Dentistas - Cursos CD C",
