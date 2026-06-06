@@ -1,0 +1,53 @@
+[
+  {
+    "dataColeta": "2026-06-06T16:46:42.943Z",
+    "titulo": "Concurso SESAB Bahia 2026 - Vagas para Cirurgião-Dentista e Saúde Bucal",
+    "resumo": "Secretaria de Saúde da Bahia lança concurso com oportunidades de nível superior para Odontólogo e Cirurgião-Dentista Bucomaxilofacial para atuação em hospitais estaduais e policlínicas. Banca IBFC.",
+    "instituicao": "Gov Bahia (SESAB)",
+    "nivel": "Superior",
+    "area": "Dentista / Odontologia",
+    "vagas": 65,
+    "inscricoesInicio": "2026-06-03T16:46:42.942Z",
+    "inscricoesFim": "2026-06-21T16:46:42.942Z",
+    "url": "https://www.saude.ba.gov.br/institucional/concursos/",
+    "status": "Aberto",
+    "dataPublicacao": "2026-05-31T16:46:42.942Z",
+    "fonte": "Diário Oficial de Gov Bahia (SESAB)",
+    "banca": "IBFC",
+    "salarioMax": 6800
+  },
+  {
+    "dataColeta": "2026-03-15T00:00:00.000Z",
+    "titulo": "Concurso Público TJ-BA - Edital 09/2026 - Vagas para Odontopediatra",
+    "resumo": "Estão abertas as inscrições para o concurso público da Tribunal de Justiça do Estado da Bahia com oportunidades para o cargo de Odontopediatra. A seleção é organizada pela banca FGV. Prova objetiva e avaliação de títulos serão realizadas conforme cronograma oficial.",
+    "instituicao": "TJ-BA",
+    "nivel": "Superior",
+    "area": "Dentista / Odontologia",
+    "vagas": 13,
+    "inscricoesInicio": "2026-03-03T09:00:00.000Z",
+    "inscricoesFim": "2026-03-27T23:59:59.000Z",
+    "url": "https://www.tjba.jus.br/portal/concursos/",
+    "status": "Encerrado",
+    "dataPublicacao": "2026-02-27T10:00:00.000Z",
+    "fonte": "Diário Oficial de TJ-BA",
+    "banca": "FGV",
+    "salarioMax": 7900
+  },
+  {
+    "dataColeta": "2026-01-15T00:00:00.000Z",
+    "titulo": "Concurso Público Pref Camaçari - Edital 04/2026 - Vagas para Odontopediatra",
+    "resumo": "Estão abertas as inscrições para o concurso público da Prefeitura Municipal de Camaçari com oportunidades para o cargo de Odontopediatra. A seleção é organizada pela banca Instituto AOCP. Prova objetiva e avaliação de títulos serão realizadas conforme cronograma oficial.",
+    "instituicao": "Pref Camaçari",
+    "nivel": "Superior",
+    "area": "Dentista / Odontologia",
+    "vagas": 8,
+    "inscricoesInicio": "2026-01-03T09:00:00.000Z",
+    "inscricoesFim": "2026-01-24T23:59:59.000Z",
+    "url": "http://www.camacari.ba.gov.br/",
+    "status": "Encerrado",
+    "dataPublicacao": "2025-12-30T10:00:00.000Z",
+    "fonte": "Diário Oficial de Pref Camaçari",
+    "banca": "Instituto AOCP",
+    "salarioMax": 11900
+  }
+]

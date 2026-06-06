@@ -1,0 +1,53 @@
+[
+  {
+    "dataColeta": "2026-06-06T16:46:42.942Z",
+    "titulo": "Concurso SEDUC Bahia 2026 - Edital 01/2026 - Provimento de Vagas para Professor e Pedagogo",
+    "resumo": "O Governo do Estado da Bahia abre concurso público para provimento de vagas no cargo de Professor Padrão P - Grau III da Educação Básica e Pedagogo. Organizado pela banca FCC.",
+    "instituicao": "Gov Bahia (SEC)",
+    "nivel": "Superior",
+    "area": "Professor",
+    "vagas": 450,
+    "inscricoesInicio": "2026-06-04T16:46:42.942Z",
+    "inscricoesFim": "2026-06-26T16:46:42.942Z",
+    "url": "https://www.saeb.ba.gov.br/concursos",
+    "status": "Aberto",
+    "dataPublicacao": "2026-06-01T16:46:42.942Z",
+    "fonte": "Diário Oficial de Gov Bahia (SEC)",
+    "banca": "FCC",
+    "salarioMax": 4850
+  },
+  {
+    "dataColeta": "2026-04-15T00:00:00.000Z",
+    "titulo": "Concurso Público IFBA - Edital 11/2026 - Vagas para Professor de Geografia",
+    "resumo": "Estão abertas as inscrições para o concurso público da Instituto Federal da Bahia com oportunidades para o cargo de Professor de Geografia. A seleção é organizada pela banca IBFC. Prova objetiva e avaliação de títulos serão realizadas conforme cronograma oficial.",
+    "instituicao": "IFBA",
+    "nivel": "Superior",
+    "area": "Professor",
+    "vagas": 15,
+    "inscricoesInicio": "2026-04-04T09:00:00.000Z",
+    "inscricoesFim": "2026-04-24T23:59:59.000Z",
+    "url": "https://portal.ifba.edu.br/concursos",
+    "status": "Encerrado",
+    "dataPublicacao": "2026-03-31T10:00:00.000Z",
+    "fonte": "Diário Oficial de IFBA",
+    "banca": "IBFC",
+    "salarioMax": 7500
+  },
+  {
+    "dataColeta": "2026-01-15T00:00:00.000Z",
+    "titulo": "Concurso Público Prefeitura de Salvador - Edital 06/2026 - Vagas para Professor de Educação Física",
+    "resumo": "Estão abertas as inscrições para o concurso público da Prefeitura Municipal de Salvador com oportunidades para o cargo de Professor de Educação Física. A seleção é organizada pela banca IDIB. Prova objetiva e avaliação de títulos serão realizadas conforme cronograma oficial.",
+    "instituicao": "Prefeitura de Salvador",
+    "nivel": "Superior",
+    "area": "Professor",
+    "vagas": 10,
+    "inscricoesInicio": "2026-01-02T09:00:00.000Z",
+    "inscricoesFim": "2026-01-25T23:59:59.000Z",
+    "url": "http://www.concursos.salvador.ba.gov.br/",
+    "status": "Encerrado",
+    "dataPublicacao": "2025-12-29T10:00:00.000Z",
+    "fonte": "Diário Oficial de Prefeitura de Salvador",
+    "banca": "IDIB",
+    "salarioMax": 3500
+  }
+]
