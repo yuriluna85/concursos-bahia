@@ -1,9 +1,9 @@
 {
-  "geradoEm": "2026-06-06T21:40:45.440Z",
-  "totalGeral": 53,
+  "geradoEm": "2026-06-06T23:39:37.317Z",
+  "totalGeral": 54,
   "totaisNiveis": {
     "Médio": 10,
-    "Superior": 43,
+    "Superior": 44,
     "Técnico": 0
   },
   "totaisAreas": {
@@ -11,16 +11,16 @@
     "Pedagogo": 8,
     "Tecnologia da Informação": 11,
     "Dentista / Odontologia": 11,
-    "Geral / Outras Áreas": 9
+    "Geral / Outras Áreas": 10
   },
   "status": {
     "Aberto": 11,
-    "Encerrado": 42
+    "Encerrado": 43
   },
   "porInstituicao": [
     {
       "nome": "Gov Bahia (SEC)",
-      "total": 18
+      "total": 19
     },
     {
       "nome": "Prefeitura de Salvador",
