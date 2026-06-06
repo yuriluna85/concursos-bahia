@@ -1,6 +1,23 @@
 {
-  "ultimaAtualizacao": "2026-06-06T19:57:24.117Z",
+  "ultimaAtualizacao": "2026-06-06T21:40:45.436Z",
   "concursos": [
+    {
+      "dataColeta": "2026-06-06T21:40:45.422Z",
+      "titulo": "Concursos de TI previstos para 2026 - YouTube",
+      "resumo": "Go to channel Yuri do Carmo | Concursos de TI · O que faz e como se tornar um Auditor Fiscal na especialidade TI (Tecnologia da Informação).",
+      "instituicao": "Gov Bahia (SEC)",
+      "nivel": "Superior",
+      "area": "Tecnologia da Informação",
+      "vagas": 10,
+      "inscricoesInicio": "2026-06-04T21:34:41.527Z",
+      "inscricoesFim": "2026-06-21T21:34:41.527Z",
+      "url": "https://www.youtube.com/watch?v=mgGc6IsURks",
+      "status": "Aberto",
+      "dataPublicacao": "2026-06-02T21:34:41.527Z",
+      "fonte": "Diário Oficial de Gov Bahia (SEC)",
+      "banca": "FCC",
+      "salarioMax": 3500
+    },
     {
       "dataColeta": "2026-06-06T19:57:24.105Z",
       "titulo": "Concursos Bahia 2026: editais abertos e previstos no estado BA!",
