@@ -35,3 +35,4 @@ jobs:
         git add -A
         git diff-index --quiet HEAD || git commit -m "chore: atualizacao de concursos e metricas [skip ci]"
         git push origin main
+
