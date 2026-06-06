@@ -6,6 +6,42 @@ const NOMES_MESES = [
   'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
 ];
 
+// Helper nativo para realizar requisicoes HTTP/HTTPS com Promises (sem dependencias)
+function httpRequest(options, postData = null) {
+  return new Promise((resolve, reject) => {
+    const httpLib = (options.url && options.url.startsWith('https')) ? require('https') : require('http');
+    const targetUrl = options.url || null;
+    
+    let reqOptions = { ...options };
+    if (targetUrl) {
+      const parsedUrl = new URL(targetUrl);
+      reqOptions.hostname = parsedUrl.hostname;
+      reqOptions.path = parsedUrl.pathname + parsedUrl.search;
+      reqOptions.port = parsedUrl.port;
+      reqOptions.protocol = parsedUrl.protocol;
+    }
+
+    const req = httpLib.request(reqOptions, (res) => {
+      let data = '';
+      res.on('data', (chunk) => { data += chunk; });
+      res.on('end', () => {
+        resolve({
+          statusCode: res.statusCode,
+          headers: res.headers,
+          data: data
+        });
+      });
+    });
+
+    req.on('error', (err) => { reject(err); });
+
+    if (postData) {
+      req.write(typeof postData === 'string' ? postData : JSON.stringify(postData));
+    }
+    req.end();
+  });
+}
+
 // Bancas organizadoras e siglas de órgãos para gerar feeds e mock data
 const ORGAOS_CONCURSO = [
   { sigla: 'Prefeitura de Salvador', orgao: 'Prefeitura Municipal de Salvador', site: 'https://www.salvador.ba.gov.br' },
@@ -406,8 +442,235 @@ function verificarEGerarHistoricoRetroativo() {
   console.log("Histórico retroativo de concursos criado com sucesso!");
 }
 
-// Simula busca por novos editais de concurso no presente (Junho 2026)
+// Busca concursos reais no Google via Serper.dev e le com ScraperAPI se as chaves estiverem configuradas
 async function buscarNovosConcursos() {
+  const SERPER_KEY = process.env.SERPER_API_KEY;
+  const SCRAPER_KEY = process.env.SCRAPER_API_KEY;
+
+  if (!SERPER_KEY || !SCRAPER_KEY) {
+    console.log("Aviso: Chaves SERPER_API_KEY ou SCRAPER_API_KEY ausentes. Utilizando dados de simulacao/fallback...");
+    return buscarNovosConcursosSimulados();
+  }
+
+  console.log("Iniciando busca dinamica de concursos reais usando Serper e Scraper API...");
+  
+  const resultados = {
+    'professor': [],
+    'pedagogo': [],
+    'ti': [],
+    'dentista': [],
+    'geral': []
+  };
+
+  const queries = [
+    'site:ba.gov.br "concurso publico" 2026',
+    'concurso prefeitura bahia "professor" OR "pedagogo" 2026',
+    'concurso bahia "tecnologia da informacao" OR "ti" OR "dentista" 2026'
+  ];
+
+  const linksProcessados = new Set();
+  const hoje = new Date();
+
+  for (const query of queries) {
+    try {
+      console.log(`Buscando no Google: "${query}"`);
+      const searchRes = await httpRequest({
+        url: 'https://google.serper.dev/search',
+        method: 'POST',
+        headers: {
+          'X-API-KEY': SERPER_KEY,
+          'Content-Type': 'application/json'
+        }
+      }, {
+        q: query,
+        gl: 'br',
+        hl: 'pt-br'
+      });
+
+      if (searchRes.statusCode === 200) {
+        const searchData = JSON.parse(searchRes.data);
+        const items = searchData.organic || [];
+        
+        for (const item of items.slice(0, 5)) { // Limita aos 5 primeiros resultados por query
+          const url = item.link;
+          if (linksProcessados.has(url)) continue;
+          linksProcessados.add(url);
+
+          console.log(`Acessando e extraindo dados reais de: ${url}`);
+          const scraperUrl = `https://api.scraperapi.com/?api_key=${SCRAPER_KEY}&url=${encodeURIComponent(url)}&render=true`;
+          
+          try {
+            const scrapeRes = await httpRequest({ url: scraperUrl, method: 'GET' });
+            if (scrapeRes.statusCode === 200) {
+              const html = scrapeRes.data;
+              
+              // Extrai o titulo da pagina
+              let titulo = item.title;
+              const titleMatch = html.match(/<title>(.*?)<\/title>/i);
+              if (titleMatch && titleMatch[1]) {
+                titulo = titleMatch[1].trim();
+              }
+
+              // Limpa tags HTML para extrair texto bruto legivel
+              let textContent = html
+                .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
+                .replace(/<[^>]*>/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+
+              const textLower = textContent.toLowerCase();
+
+              // Determina o tema/eixo do concurso
+              let temaChave = 'geral';
+              let maxContagem = 0;
+              for (const [key, val] of Object.entries(TEMAS_VAGAS)) {
+                if (key === 'geral') continue;
+                let contagem = 0;
+                val.keywords.forEach(kw => {
+                  const regex = new RegExp(`\\b${kw}\\b`, 'gi');
+                  const matches = textLower.match(regex);
+                  if (matches) contagem += matches.length;
+                });
+                if (contagem > maxContagem) {
+                  maxContagem = contagem;
+                  temaChave = key;
+                }
+              }
+
+              const area = TEMAS_VAGAS[temaChave].nome;
+
+              // Determina a instituicao correspondente
+              let instituicao = 'Gov Bahia (SEC)'; // Default
+              let encontrada = false;
+              for (const [inst, site] of Object.entries(SITES_CONCURSOS)) {
+                const cleanSite = site.replace('https://', '').replace('http://', '').replace('www.', '').toLowerCase();
+                const domainPart = cleanSite.split('/')[0];
+                if (url.toLowerCase().includes(domainPart)) {
+                  instituicao = inst;
+                  encontrada = true;
+                  break;
+                }
+              }
+
+              if (!encontrada) {
+                for (const org of ORGAOS_CONCURSO) {
+                  if (textLower.includes(org.sigla.toLowerCase()) || textLower.includes(org.orgao.toLowerCase())) {
+                    instituicao = org.sigla;
+                    encontrada = true;
+                    break;
+                  }
+                }
+              }
+
+              // Determina a banca
+              let banca = 'A definir';
+              for (const b of BANCAS_REALISTAS) {
+                if (textLower.includes(b.toLowerCase())) {
+                  banca = b;
+                  break;
+                }
+              }
+
+              // Determina o nivel
+              let nivel = 'Superior';
+              if (textLower.includes('ensino medio') || textLower.includes('ensino médio') || textLower.includes('nivel medio') || textLower.includes('nível médio')) {
+                nivel = 'Médio';
+              } else if (textLower.includes('ensino tecnico') || textLower.includes('ensino técnico') || textLower.includes('nivel tecnico') || textLower.includes('nível técnico')) {
+                nivel = 'Técnico';
+              }
+
+              // Extrai datas de inscricoes usando expressao regular para dd/mm/aaaa
+              let inscInicio = new Date(hoje.getTime() - (2 * 24 * 3600 * 1000)).toISOString();
+              let inscFim = new Date(hoje.getTime() + (15 * 24 * 3600 * 1000)).toISOString();
+              const dateRegex = /\b(\d{2})\/(\d{2})\/(\d{4})\b/g;
+              const dates = [];
+              let match;
+              while ((match = dateRegex.exec(textContent)) !== null) {
+                const day = parseInt(match[1]);
+                const month = parseInt(match[2]) - 1;
+                const year = parseInt(match[3]);
+                const parsedDate = new Date(year, month, day);
+                if (!isNaN(parsedDate.getTime()) && year >= 2026) {
+                  dates.push(parsedDate);
+                }
+              }
+
+              if (dates.length >= 2) {
+                dates.sort((a, b) => a - b);
+                inscInicio = dates[0].toISOString();
+                inscFim = dates[dates.length - 1].toISOString();
+              }
+
+              // Extrai vagas
+              let vagas = 10;
+              const vagasRegex = /(\d+)\s*vagas/gi;
+              let vagasMatch;
+              let maxVagas = 0;
+              while ((vagasMatch = vagasRegex.exec(textContent)) !== null) {
+                let val = parseInt(vagasMatch[1]);
+                if (!isNaN(val) && val > maxVagas && val < 5000) {
+                  maxVagas = val;
+                }
+              }
+              if (maxVagas > 0) vagas = maxVagas;
+
+              // Extrai salario
+              let salarioMax = 3500;
+              const salarioRegex = /R\$\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)/gi;
+              let salarioMatch;
+              let maxSal = 0;
+              while ((salarioMatch = salarioRegex.exec(textContent)) !== null) {
+                let valStr = salarioMatch[1].replace(/\./g, '').replace(',', '.');
+                let val = parseFloat(valStr);
+                if (!isNaN(val) && val > maxSal && val < 50000) {
+                  maxSal = val;
+                }
+              }
+              if (maxSal > 0) salarioMax = maxSal;
+
+              const status = new Date(inscFim) >= hoje ? "Aberto" : "Encerrado";
+              const resumo = item.snippet ? item.snippet.trim() : `Concurso publico aberto para provimento de vagas. Confira o edital oficial da instituicao para mais detalhes sobre os prazos de inscricao.`;
+
+              resultados[temaChave].push({
+                titulo: titulo.substring(0, 100),
+                resumo: resumo.substring(0, 300),
+                instituicao,
+                nivel,
+                area,
+                vagas,
+                inscricoesInicio: inscInicio,
+                inscricoesFim: inscFim,
+                url,
+                status,
+                dataPublicacao: new Date(hoje.getTime() - (4 * 24 * 3600 * 1000)).toISOString(),
+                fonte: `Diário Oficial de ${instituicao}`,
+                banca,
+                salarioMax
+              });
+            }
+          } catch (e) {
+            console.error(`Erro ao raspar a URL ${url}:`, e.message);
+          }
+        }
+      }
+    } catch (e) {
+      console.error(`Erro na busca da Serper para a query "${query}":`, e.message);
+    }
+  }
+
+  // Se a busca falhou ou retornou vazia (ex: cota estourada), usa fallbacks simulados
+  const totalObtido = resultados.professor.length + resultados.pedagogo.length + resultados.ti.length + resultados.dentista.length + resultados.geral.length;
+  if (totalObtido === 0) {
+    console.log("Nenhum concurso real extraido. Utilizando fallbacks simulados...");
+    return buscarNovosConcursosSimulados();
+  }
+
+  return resultados;
+}
+
+// Simula busca por novos editais de concurso no presente (Junho 2026)
+async function buscarNovosConcursosSimulados() {
   console.log("Buscando novos editais de concursos públicos abertos na Bahia...");
   
   const resultados = {

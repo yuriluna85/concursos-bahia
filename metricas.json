@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-06-06T17:02:08.881Z",
+  "geradoEm": "2026-06-06T16:57:07.625Z",
   "totalGeral": 43,
   "totaisNiveis": {
     "Médio": 4,
@@ -27,11 +27,11 @@
       "total": 6
     },
     {
-      "nome": "TJ-BA",
+      "nome": "Gov Bahia (SESAB)",
       "total": 4
     },
     {
-      "nome": "Gov Bahia (SESAB)",
+      "nome": "TJ-BA",
       "total": 4
     },
     {
@@ -39,11 +39,11 @@
       "total": 4
     },
     {
-      "nome": "Pref Camaçari",
+      "nome": "Pref Vitória da Conquista",
       "total": 4
     },
     {
-      "nome": "Pref Vitória da Conquista",
+      "nome": "Pref Camaçari",
       "total": 4
     },
     {
@@ -51,11 +51,11 @@
       "total": 4
     },
     {
-      "nome": "UFBA",
+      "nome": "IFBA",
       "total": 3
     },
     {
-      "nome": "IFBA",
+      "nome": "UFBA",
       "total": 3
     }
   ]
