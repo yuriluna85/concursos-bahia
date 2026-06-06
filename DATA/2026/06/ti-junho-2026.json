@@ -1,0 +1,36 @@
+[
+  {
+    "dataColeta": "2026-06-06T17:02:08.866Z",
+    "titulo": "Concurso TJ-BA 2026 - Analista Judiciário - Área de TI e Computação",
+    "resumo": "Tribunal de Justiça da Bahia abre vagas imediatas para profissionais de TI nas especialidades de Banco de Dados, Redes de Computadores e IA. Banca Cebraspe.",
+    "instituicao": "TJ-BA",
+    "nivel": "Superior",
+    "area": "Tecnologia e Informática",
+    "vagas": 25,
+    "inscricoesInicio": "2026-06-05T17:02:08.865Z",
+    "inscricoesFim": "2026-06-23T17:02:08.865Z",
+    "url": "https://www.tjba.jus.br/portal/concursos/",
+    "status": "Aberto",
+    "dataPublicacao": "2026-06-03T17:02:08.865Z",
+    "fonte": "Diário Oficial de TJ-BA",
+    "banca": "Cebraspe",
+    "salarioMax": 10450
+  },
+  {
+    "dataColeta": "2026-06-06T17:02:08.866Z",
+    "titulo": "Concurso Prefeitura de Salvador 2026 - Edital 04/2026 - Vagas na área de TI",
+    "resumo": "Concurso da Prefeitura de Salvador abre vagas imediatas para Analista de Tecnologia da Informação nas especialidades de Engenharia de Software, Infraestrutura de Redes e Segurança. Banca FGV.",
+    "instituicao": "Prefeitura de Salvador",
+    "nivel": "Superior",
+    "area": "Tecnologia da Informação",
+    "vagas": 40,
+    "inscricoesInicio": "2026-06-05T17:02:08.865Z",
+    "inscricoesFim": "2026-06-24T17:02:08.865Z",
+    "url": "http://www.concursos.salvador.ba.gov.br/",
+    "status": "Aberto",
+    "dataPublicacao": "2026-06-02T17:02:08.865Z",
+    "fonte": "Diário Oficial de Prefeitura de Salvador",
+    "banca": "FGV",
+    "salarioMax": 9200
+  }
+]
