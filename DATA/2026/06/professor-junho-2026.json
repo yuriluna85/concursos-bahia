@@ -100,5 +100,22 @@
     "fonte": "Diário Oficial de Gov Bahia (SEC)",
     "banca": "A definir",
     "salarioMax": 3500
+  },
+  {
+    "dataColeta": "2026-06-07T05:02:31.923Z",
+    "titulo": "Concurso SEDUC Bahia 2026 - Edital 01/2026 - Provimento de Vagas para Professor e Pedagogo",
+    "resumo": "O Governo do Estado da Bahia abre concurso público para provimento de vagas no cargo de Professor Padrão P - Grau III da Educação Básica e Pedagogo. Organizado pela banca FCC.",
+    "instituicao": "Gov Bahia (SEC)",
+    "nivel": "Superior",
+    "area": "Professor",
+    "vagas": 450,
+    "inscricoesInicio": "2026-06-05T05:02:31.922Z",
+    "inscricoesFim": "2026-06-27T05:02:31.922Z",
+    "url": "https://www.saeb.ba.gov.br/concursos",
+    "status": "Aberto",
+    "dataPublicacao": "2026-06-02T05:02:31.922Z",
+    "fonte": "Diário Oficial de Gov Bahia (SEC)",
+    "banca": "FCC",
+    "salarioMax": 4850
   }
 ]
