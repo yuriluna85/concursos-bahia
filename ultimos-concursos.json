@@ -1,6 +1,40 @@
 {
-  "ultimaAtualizacao": "2026-06-11T20:40:46.015Z",
+  "ultimaAtualizacao": "2026-06-12T00:03:30.243Z",
   "concursos": [
+    {
+      "dataColeta": "2026-06-12T00:03:30.230Z",
+      "titulo": "Editais Abertos para Dentistas 2026 — 21 Concursos Detalhados | Odon Concursos",
+      "resumo": "CONCURSO FORMOSA DO RIO PRETO BA 12 VAGAS DENTISTA 2026. Doze vagas para Odontólogo 40h com salário de R$ 5.411,76, banca Instituto Ação, inscrições até 03/07 ...",
+      "instituicao": "Gov Bahia (SEC)",
+      "nivel": "Superior",
+      "area": "Dentista / Odontologia",
+      "vagas": 287,
+      "inscricoesInicio": "2026-01-15T00:00:00.000Z",
+      "inscricoesFim": "2026-08-16T00:00:00.000Z",
+      "url": "https://odonconcursos.com.br/noticia/editais-abertos-para-dentista-em-2026",
+      "status": "Aberto",
+      "dataPublicacao": "2026-06-07T23:58:01.772Z",
+      "fonte": "Diário Oficial de Gov Bahia (SEC)",
+      "banca": "FGV",
+      "salarioMax": 17000
+    },
+    {
+      "dataColeta": "2026-06-12T00:03:30.229Z",
+      "titulo": "Concursos Educação 2026: 24 mil novos cargos autorizados!",
+      "resumo": "... pedagogo. Formação: superior. Vagas: 121 + 362. Salário: R$ 6.071 ... 2026 e ofertar 10 mil vagas para professor. Status, anunciado. Cargos ...",
+      "instituicao": "Gov Bahia (SEC)",
+      "nivel": "Médio",
+      "area": "Professor",
+      "vagas": 604,
+      "inscricoesInicio": "2026-06-09T23:58:01.772Z",
+      "inscricoesFim": "2026-06-26T23:58:01.772Z",
+      "url": "https://www.estrategiaconcursos.com.br/blog/concursos-educacao/",
+      "status": "Aberto",
+      "dataPublicacao": "2026-06-07T23:58:01.772Z",
+      "fonte": "Diário Oficial de Gov Bahia (SEC)",
+      "banca": "FGV",
+      "salarioMax": 13451.43
+    },
     {
       "dataColeta": "2026-06-07T05:02:31.924Z",
       "titulo": "Concurso Prefeitura de Feira de Santana - Edital 02/2026 - Vagas para Pedagogos e Professores",
