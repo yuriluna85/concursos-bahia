@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-06-21T14:38:31.927Z",
+  "ultimaAtualizacao": "2026-06-21T18:01:32.597Z",
   "concursos": [
     {
       "dataColeta": "2026-06-12T05:18:55.940Z",
@@ -138,23 +138,6 @@
       "salarioMax": 14667.84
     },
     {
-      "dataColeta": "2026-06-06T17:48:08.034Z",
-      "titulo": "Concurso PM BA e CBM BA Saúde 2026: Oportunidade Estratégica para Cirurgiões-Dentistas - Cursos CD C",
-      "resumo": "Concurso PM BA e CBM BA Saúde 2026 para dentistas. Veja oportunidades ... O dentista militar também participa de inspeções e perícias ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Superior",
-      "area": "Dentista / Odontologia",
-      "vagas": 12,
-      "inscricoesInicio": "2026-06-04T17:39:18.213Z",
-      "inscricoesFim": "2026-06-21T17:39:18.213Z",
-      "url": "https://cdconcursos.com.br/blog/concurso-pm-ba-e-cbm-ba-saude-2026-oportunidade-estrategica-para-cirurgioes-dentistas/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:39:18.213Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "Instituto AOCP",
-      "salarioMax": 11006.5
-    },
-    {
       "dataColeta": "2026-06-06T17:25:59.810Z",
       "titulo": "Editais Abertos para Dentistas 2026 — 21 Concursos Detalhados | Odon Concursos",
       "resumo": "Cargo: Cir. Dentista (cód. 020). Requisito: Ensino Superior em Odontologia + registro no Conselho de Classe. Disciplinas: Língua Portuguesa (10 q) · ...",
@@ -189,40 +172,6 @@
       "salarioMax": 23154.14
     },
     {
-      "dataColeta": "2026-06-06T17:25:59.810Z",
-      "titulo": "Concurso Odontologia: vagas abertas e editais previstos!",
-      "resumo": "Quer ficar por dentro dos concurso para Dentista? Confira os editais ... Tecnologia da Informação, TRE-SP, Tribunais, Tribunais de Contas ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Superior",
-      "area": "Dentista / Odontologia",
-      "vagas": 8,
-      "inscricoesInicio": "2026-06-04T17:18:30.693Z",
-      "inscricoesFim": "2026-06-21T17:18:30.693Z",
-      "url": "https://www.estrategiaconcursos.com.br/blog/concurso-odontologia/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "FGV",
-      "salarioMax": 9745.26
-    },
-    {
-      "dataColeta": "2026-06-06T17:25:59.809Z",
-      "titulo": "Concursos Bahia: confira as vagas e editais para 2026!",
-      "resumo": "... Bahia, realizará um concurso para a área da educação em 2026! Vagas/ Cargos e salário inicial. Cargo: Professor educação básica; Formação ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Médio",
-      "area": "Professor",
-      "vagas": 246,
-      "inscricoesInicio": "2026-06-04T17:18:30.693Z",
-      "inscricoesFim": "2026-06-21T17:18:30.693Z",
-      "url": "https://www.estrategiaconcursos.com.br/blog/concursos-ba/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "FGV",
-      "salarioMax": 37589.95
-    },
-    {
       "dataColeta": "2026-06-06T17:25:59.809Z",
       "titulo": "&gt; &gt; &gt; Concursos e Consultoria &lt; &lt; &lt;",
       "resumo": ". PROCESSO SELETIVO SIMPLIFICADO - EDITAL 001/2026 - PREFEITURA MUNICIPAL DE MANSIDÃO / BA ... São vagas para os cargos de Professor. Informações sobre o Concurso ...",
@@ -237,40 +186,6 @@
       "dataPublicacao": "2026-06-02T17:18:30.693Z",
       "fonte": "Diário Oficial de Gov Bahia (SEC)",
       "banca": "Planejar Consultoria",
-      "salarioMax": 3500
-    },
-    {
-      "dataColeta": "2026-06-06T17:25:59.809Z",
-      "titulo": "Seleções e Concursos | SEC - Secretaria de Educação",
-      "resumo": "EDITAL SEC/SUDEPE N° 002/2026 - Processo Seletivo Simplificado Função de Professor Orientador de Estágio em Saúde – REDA. CONVOCAÇÃO PROVA OBJETIVA EDITAL ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Médio",
-      "area": "Professor",
-      "vagas": 10,
-      "inscricoesInicio": "2026-06-04T17:18:30.693Z",
-      "inscricoesFim": "2026-06-21T17:18:30.693Z",
-      "url": "http://www.ba.gov.br/educacao/selecoes-e-concursos",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "A definir",
-      "salarioMax": 3500
-    },
-    {
-      "dataColeta": "2026-06-06T17:25:59.810Z",
-      "titulo": "Prefeitura de Vitória da Conquista autoriza realização de concurso público na Secretaria Municipal d",
-      "resumo": "... Concurso Público Edital Nº 001/2026, destinado ao preenchimento de 24 (vinte e quatro) vagas, bem como a formação de cadastro reserva para ...",
-      "instituicao": "Pref Vitória da Conquista",
-      "nivel": "Superior",
-      "area": "Tecnologia da Informação",
-      "vagas": 182,
-      "inscricoesInicio": "2026-06-04T17:18:30.693Z",
-      "inscricoesFim": "2026-06-21T17:18:30.693Z",
-      "url": "https://www.pmvc.ba.gov.br/prefeitura-de-vitoria-da-conquista-autoriza-realizacao-de-concurso-publico-na-secretaria-municipal-de-financas/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Pref Vitória da Conquista",
-      "banca": "A definir",
       "salarioMax": 3500
     },
     {
