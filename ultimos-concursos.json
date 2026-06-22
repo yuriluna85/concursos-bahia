@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-06-21T23:49:42.966Z",
+  "ultimaAtualizacao": "2026-06-22T05:39:12.943Z",
   "concursos": [
     {
       "dataColeta": "2026-06-12T05:18:55.940Z",
@@ -155,23 +155,6 @@
       "salarioMax": 23154.14
     },
     {
-      "dataColeta": "2026-06-06T17:25:59.809Z",
-      "titulo": "&gt; &gt; &gt; Concursos e Consultoria &lt; &lt; &lt;",
-      "resumo": ". PROCESSO SELETIVO SIMPLIFICADO - EDITAL 001/2026 - PREFEITURA MUNICIPAL DE MANSIDÃO / BA ... São vagas para os cargos de Professor. Informações sobre o Concurso ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Médio",
-      "area": "Professor",
-      "vagas": 10,
-      "inscricoesInicio": "2026-03-09T00:00:00.000Z",
-      "inscricoesFim": "2026-06-22T00:00:00.000Z",
-      "url": "https://www.planejarconcursos.com.br/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "Planejar Consultoria",
-      "salarioMax": 3500
-    },
-    {
       "dataColeta": "2026-06-06T17:25:59.810Z",
       "titulo": "Concursos TI: editais publicados e previstos em 2026! AQUI",
       "resumo": "Concursos TI: confira o levantamento completo com todas as oportunidades para a carreira de Tecnologia da Informação. Por Lays Paixão",
@@ -204,23 +187,6 @@
       "fonte": "Diário Oficial de Gov Bahia (SEC)",
       "banca": "FCC",
       "salarioMax": 4850
-    },
-    {
-      "dataColeta": "2026-06-07T05:02:31.924Z",
-      "titulo": "Concurso SESAB Bahia 2026 - Vagas para Cirurgião-Dentista e Saúde Bucal",
-      "resumo": "Secretaria de Saúde da Bahia lança concurso com oportunidades de nível superior para Odontólogo e Cirurgião-Dentista Bucomaxilofacial para atuação em hospitais estaduais e policlínicas. Banca IBFC.",
-      "instituicao": "Gov Bahia (SESAB)",
-      "nivel": "Superior",
-      "area": "Dentista / Odontologia",
-      "vagas": 65,
-      "inscricoesInicio": "2026-06-04T05:02:31.922Z",
-      "inscricoesFim": "2026-06-22T05:02:31.922Z",
-      "url": "https://www.saude.ba.gov.br/institucional/concursos/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-01T05:02:31.922Z",
-      "fonte": "Diário Oficial de Gov Bahia (SESAB)",
-      "banca": "IBFC",
-      "salarioMax": 6800
     }
   ]
 }
