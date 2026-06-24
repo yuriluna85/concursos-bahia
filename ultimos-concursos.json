@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-06-24T04:44:46.506Z",
+  "ultimaAtualizacao": "2026-06-24T09:54:36.875Z",
   "concursos": [
     {
       "dataColeta": "2026-06-12T05:18:55.940Z",
@@ -68,23 +68,6 @@
       "fonte": "Diário Oficial de Pref Feira de Santana",
       "banca": "Instituto AOCP",
       "salarioMax": 3800
-    },
-    {
-      "dataColeta": "2026-06-07T05:02:31.924Z",
-      "titulo": "Concurso TJ-BA 2026 - Analista Judiciário - Área de TI e Computação",
-      "resumo": "Tribunal de Justiça da Bahia abre vagas imediatas para profissionais de TI nas especialidades de Banco de Dados, Redes de Computadores e IA. Banca Cebraspe.",
-      "instituicao": "TJ-BA",
-      "nivel": "Superior",
-      "area": "Tecnologia e Informática",
-      "vagas": 25,
-      "inscricoesInicio": "2026-06-06T05:02:31.922Z",
-      "inscricoesFim": "2026-06-24T05:02:31.922Z",
-      "url": "https://www.tjba.jus.br/portal/concursos/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-04T05:02:31.922Z",
-      "fonte": "Diário Oficial de TJ-BA",
-      "banca": "Cebraspe",
-      "salarioMax": 10450
     },
     {
       "dataColeta": "2026-06-07T05:02:31.924Z",
