@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-06-25T04:40:00.471Z",
+  "ultimaAtualizacao": "2026-06-25T09:49:40.294Z",
   "concursos": [
     {
       "dataColeta": "2026-06-12T05:18:55.940Z",
@@ -68,23 +68,6 @@
       "fonte": "Diário Oficial de Pref Feira de Santana",
       "banca": "Instituto AOCP",
       "salarioMax": 3800
-    },
-    {
-      "dataColeta": "2026-06-07T05:02:31.924Z",
-      "titulo": "Concurso Prefeitura de Salvador 2026 - Edital 04/2026 - Vagas na área de TI",
-      "resumo": "Concurso da Prefeitura de Salvador abre vagas imediatas para Analista de Tecnologia da Informação nas especialidades de Engenharia de Software, Infraestrutura de Redes e Segurança. Banca FGV.",
-      "instituicao": "Prefeitura de Salvador",
-      "nivel": "Superior",
-      "area": "Tecnologia da Informação",
-      "vagas": 40,
-      "inscricoesInicio": "2026-06-06T05:02:31.922Z",
-      "inscricoesFim": "2026-06-25T05:02:31.922Z",
-      "url": "http://www.concursos.salvador.ba.gov.br/",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-03T05:02:31.922Z",
-      "fonte": "Diário Oficial de Prefeitura de Salvador",
-      "banca": "FGV",
-      "salarioMax": 9200
     },
     {
       "dataColeta": "2026-06-06T19:57:24.105Z",
