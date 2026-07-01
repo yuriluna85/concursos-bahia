@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-06-30T23:42:40.012Z",
+  "ultimaAtualizacao": "2026-07-01T05:00:22.539Z",
   "concursos": [
     {
       "titulo": "Concurso Prefeitura de Feira de Santana - Edital 02/2026 - Vagas para Educação (Professores e Pedagogos)",
@@ -11,9 +11,9 @@
       "url": "http://www.feiradesantana.ba.gov.br/secao.asp?id=51",
       "banca": "Instituto AOCP",
       "salarioMax": 3800,
-      "inscricoesInicio": "2026-06-29T19:50:07.287Z",
-      "inscricoesFim": "2026-07-22T19:50:07.287Z",
-      "dataPublicacao": "2026-06-26T19:50:07.287Z",
+      "inscricoesInicio": "2026-07-03T05:00:22.527Z",
+      "inscricoesFim": "2026-07-26T05:00:22.527Z",
+      "dataPublicacao": "2026-06-30T05:00:22.527Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Pref Feira de Santana"
     },
@@ -27,9 +27,9 @@
       "url": "http://www.concursos.salvador.ba.gov.br/",
       "banca": "FGV",
       "salarioMax": 9200,
-      "inscricoesInicio": "2026-06-26T19:50:07.287Z",
-      "inscricoesFim": "2026-07-15T19:50:07.287Z",
-      "dataPublicacao": "2026-06-23T19:50:07.287Z",
+      "inscricoesInicio": "2026-06-30T05:00:22.527Z",
+      "inscricoesFim": "2026-07-19T05:00:22.527Z",
+      "dataPublicacao": "2026-06-27T05:00:22.527Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Prefeitura de Salvador"
     },
@@ -43,9 +43,9 @@
       "url": "https://www.saeb.ba.gov.br/concursos",
       "banca": "FCC",
       "salarioMax": 4850,
-      "inscricoesInicio": "2026-06-25T19:50:07.287Z",
-      "inscricoesFim": "2026-07-17T19:50:07.287Z",
-      "dataPublicacao": "2026-06-22T19:50:07.287Z",
+      "inscricoesInicio": "2026-06-29T05:00:22.527Z",
+      "inscricoesFim": "2026-07-21T05:00:22.527Z",
+      "dataPublicacao": "2026-06-26T05:00:22.527Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Gov Bahia (SEC)"
     },

@@ -1,35 +1,35 @@
 {
-  "totalConcursos": 219,
-  "totalVagas": 22410,
+  "totalConcursos": 224,
+  "totalVagas": 23110,
   "totaisAreas": {
-    "Educação": 87,
-    "Tecnologia da Informação": 43,
-    "Dentista / Odontologia": 46,
+    "Educação": 89,
+    "Tecnologia da Informação": 45,
+    "Dentista / Odontologia": 47,
     "Geral / Outras Áreas": 41,
     "Tecnologia e Informática": 2
   },
   "bancasCount": {
-    "FGV": 34,
-    "Cebraspe": 20,
+    "FGV": 35,
+    "Cebraspe": 21,
     "Planejar Consultoria": 24,
     "IDIB": 24,
-    "IBFC": 22,
-    "FCC": 31,
-    "Instituto AOCP": 24,
+    "IBFC": 23,
+    "FCC": 32,
+    "Instituto AOCP": 25,
     "MS Concursos": 20,
     "A definir": 20
   },
   "instsCount": {
-    "TJ-BA": 18,
+    "TJ-BA": 19,
     "UFBA": 15,
-    "Gov Bahia (SEC)": 60,
-    "Prefeitura de Salvador": 25,
+    "Gov Bahia (SEC)": 61,
+    "Prefeitura de Salvador": 26,
     "IFBA": 14,
-    "Gov Bahia (SESAB)": 18,
-    "Pref Feira de Santana": 19,
+    "Gov Bahia (SESAB)": 19,
+    "Pref Feira de Santana": 20,
     "Pref Camaçari": 16,
     "Pref Vitória da Conquista": 18,
     "Pref Barreiras": 16
   },
-  "ultimaAtualizacao": "2026-06-30T23:42:40.017Z"
+  "ultimaAtualizacao": "2026-07-01T05:00:22.544Z"
 }
