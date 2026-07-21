@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-07-21T03:52:58.016Z",
+  "ultimaAtualizacao": "2026-07-21T07:04:14.019Z",
   "concursos": [
     {
       "titulo": "Concurso Prefeitura de Feira de Santana - Edital 02/2026 - Vagas para Educação (Professores e Pedagogos)",
@@ -16,22 +16,6 @@
       "dataPublicacao": "2026-06-30T05:00:22.527Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Pref Feira de Santana"
-    },
-    {
-      "titulo": "Concurso SEDUC Bahia 2026 - Edital 01/2026 - Provimento de Vagas para Professores e Pedagogos",
-      "resumo": "O Governo do Estado da Bahia abre concurso público para provimento de vagas nos cargos de Professor da Educação Básica e Coordenador Pedagógico. Organizado pela banca FCC.",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Superior",
-      "area": "Educação",
-      "vagas": 450,
-      "url": "https://www.saeb.ba.gov.br/concursos",
-      "banca": "FCC",
-      "salarioMax": 4850,
-      "inscricoesInicio": "2026-06-29T05:00:22.527Z",
-      "inscricoesFim": "2026-07-21T05:00:22.527Z",
-      "dataPublicacao": "2026-06-26T05:00:22.527Z",
-      "status": "Aberto",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)"
     },
     {
       "dataColeta": "2026-06-12T05:18:55.940Z",
