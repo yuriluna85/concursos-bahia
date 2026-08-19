@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-08-19T03:22:37.480Z",
+  "ultimaAtualizacao": "2026-08-19T04:59:10.914Z",
   "concursos": [
     {
       "titulo": "Concurso Prefeitura de Feira de Santana - Edital 02/2026 - Vagas para Educação (Professores e Pedagogos)",
@@ -16,22 +16,6 @@
       "dataPublicacao": "2026-07-31T03:58:06.331Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Pref Feira de Santana"
-    },
-    {
-      "titulo": "Concurso Prefeitura de Salvador 2026 - Edital 04/2026 - Vagas na Área de TI",
-      "resumo": "Concurso da Prefeitura de Salvador abre vagas imediatas para Analista de Tecnologia da Informação nas especialidades de Engenharia de Software e Segurança da Informação. Banca FGV.",
-      "instituicao": "Prefeitura de Salvador",
-      "nivel": "Superior",
-      "area": "Tecnologia da Informação",
-      "vagas": 40,
-      "url": "http://www.concursos.salvador.ba.gov.br/",
-      "banca": "FGV",
-      "salarioMax": 9200,
-      "inscricoesInicio": "2026-07-31T03:58:06.331Z",
-      "inscricoesFim": "2026-08-19T03:58:06.331Z",
-      "dataPublicacao": "2026-07-28T03:58:06.331Z",
-      "status": "Aberto",
-      "fonte": "Diário Oficial de Prefeitura de Salvador"
     },
     {
       "titulo": "Concurso SEDUC Bahia 2026 - Edital 01/2026 - Provimento de Vagas para Professores e Pedagogos",
