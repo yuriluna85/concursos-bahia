@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-08-22T22:44:22.253Z",
+  "ultimaAtualizacao": "2026-08-23T02:07:04.646Z",
   "concursos": [
     {
       "titulo": "Concurso Prefeitura de Feira de Santana - Edital 02/2026 - Vagas para Educação (Professores e Pedagogos)",
@@ -16,23 +16,6 @@
       "dataPublicacao": "2026-07-31T03:58:06.331Z",
       "status": "Aberto",
       "fonte": "Diário Oficial de Pref Feira de Santana"
-    },
-    {
-      "dataColeta": "2026-06-06T17:25:59.810Z",
-      "titulo": "Editais Abertos para Dentistas 2026 — 21 Concursos Detalhados | Odon Concursos",
-      "resumo": "Cargo: Cir. Dentista (cód. 020). Requisito: Ensino Superior em Odontologia + registro no Conselho de Classe. Disciplinas: Língua Portuguesa (10 q) · ...",
-      "instituicao": "Gov Bahia (SEC)",
-      "nivel": "Superior",
-      "area": "Dentista / Odontologia",
-      "vagas": 287,
-      "inscricoesInicio": "2026-01-15T00:00:00.000Z",
-      "inscricoesFim": "2026-08-23T00:00:00.000Z",
-      "url": "https://odonconcursos.com.br/noticia/editais-abertos-para-dentista",
-      "status": "Aberto",
-      "dataPublicacao": "2026-06-02T17:18:30.693Z",
-      "fonte": "Diário Oficial de Gov Bahia (SEC)",
-      "banca": "FGV",
-      "salarioMax": 17000
     },
     {
       "dataColeta": "2026-06-06T17:25:59.810Z",
